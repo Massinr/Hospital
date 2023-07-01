@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Hospital</title>
+</head>
+
+<body>
+    <div class="notificationContainer">
+    </div>
+    <div class="creator">
+        <button class="staffOption">staff</button>
+        <button class="patientOption">Patient</button>
+    </div>
+
+
+
+
+
+    
+<div class="staffSection">
+    <button id="closeStaffSection">&times;</button>
+    <h2>Add Staff member</h2>
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter name">
+    </div>
+    <div class="form-group">
+        <label for="role">Role:</label>
+        <input type="text" id="role" placeholder="Enter role">
+    </div>
+    <div class="form-group">
+        <label for="department">Department:</label>
+        <input type="text" id="department" placeholder="Enter department">
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" placeholder="Enter phone number">
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+        <label for="availability">Qualifications:</label>
+        <input type="text" id="qualifications" placeholder="Qualifications">
+    </div>
+    <div class="form-group">
+        <label for="availability">Experience:</label>
+        <input type="text" id="experience" placeholder="Experience">
+    </div>
+    <div class="form-group">
+        <label for="availability">Specializations:</label>
+        <input type="text" id="specializations" placeholder="Spetializations">
+    </div>
+    <div class="form-group">
+        <label for="availability">Availability:</label>
+        <input type="text" id="availability" placeholder="Availability">
+    </div>
+    <!-- name, role, department, phone, email, qualifications, experience, specializations, availability, picture -->
+
+    <div class="form-group">
+        <label for="pictureInput">Choose File:</label>
+        <div class="file-input">
+            <input type="file" id="pictureInput" name="pictureInput">
+            <label for="pictureInput" class="file-label">Select Image</label>
+        </div>
+    </div>
+
+
+    <button id="createCardBtn">Create Card</button>
+</div>
+
+<div class="patientSection">
+    <button id="closePatientSection">&times;</button>
+    <h2>Add Patient</h2>
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="patient-name" placeholder="Enter name">
+    </div>
+    <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="text" id="age" placeholder="Enter age">
+    </div>
+    <div class="form-group">
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender" placeholder="Enter gender">
+    </div>
+    <div class="form-group">
+        <label for="condition">Condition:</label>
+        <input type="text" id="condition" placeholder="Enter condition">
+    </div>
+    <div class="form-group">
+        <label for="contact">Contact:</label>
+        <input type="text" id="patient-contact" placeholder="Enter contact number">
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="patient-email" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+        <label for="appointment">Appointment:</label>
+        <input type="text" id="appointment" placeholder="Enter appointment details">
+    </div>
+
+    <div class="form-group">
+        <label for="pictureInput">Choose File:</label>
+        <div class="file-input">
+            <input type="file" id="pictureInputPatient" name="pictureInput">
+            <label for="pictureInputPatient" class="file-label">Select Image</label>
+        </div>
+    </div>
+    <button id="createPatientBtn">Add patient</button>
+</div>
+
+    <div class="wrapper">
+        <div class="menu">
+            <button id="patient"><i class="ion-ios-people"></i> Patient</button>
+            <button id="staff"><i class="ion-person-stalker"></i> Staff</button>
+            <button id="dashboard"><i class="ion-ios-speedometer"></i> Dashboard</button>
+            <button id="auditlogs"><i class="ion-ios-paper"></i> Audit Logs</button>
+            <button id="settings"><i class="ion-ios-gear"></i> Settings</button>
+            <button id="create"><i class="fas fa-user-plus"></i> Create</button>
+            <button id="reports"><i class="fas fa-chart-line"></i> Reports</button>
+
+        </div>
+
+        <div class="main">
+            <div class="staff">
+                <div class="card staff-card">
+                    <button id="removeStaff">Remove</button>
+                    <div class="info staff-info">
+                        <h3 class="name staff-name">John Doe</h3>
+                        <p class="role staff-role">Doctor</p>
+                        <p class="department staff-department">Cardiology</p>
+                        <ul class="contacts staff-contacts">
+                            <li><span class="contact-label">Phone:</span> 123-456-7890</li>
+                            <li><span class="contact-label">Email:</span> john.doe@example.com</li>
+                        </ul>
+                        <p class="qualifications staff-qualifications">MBBS, MD</p>
+                        <p class="experience staff-experience">10 years of experience</p>
+                        <p class="specializations staff-specializations">Specializations: Cardiac Electrophysiology</p>
+                        <p class="availability staff-availability">Availability: Weekdays</p>
+                    </div>
+                    <img src="/assets/staff.png" alt="Staff Photo" class="photo staff-photo">
+                </div>
+            </div>
+
+            <div class="patients">
+                <div class="card patient-card">
+                    <button id="removePatient">Remove</button>
+                    <div class="info patient-info">
+                        <h3 class="name patient-name">Jane Smith</h3>
+                        <p class="age patient-age">Age: 35</p>
+                        <p class="gender patient-gender">Gender: Female</p>
+                        <p class="condition patient-condition">Condition: Hypertension</p>
+                        <p class="contact patient-contact">Contact: 123-456-7890</p>
+                        <p class="email patient-email">Email: jane.smith@example.com</p>
+                        <p class="appointment patient-appointment">Next Appointment: July 10, 2023</p>
+                    </div>
+                    <img src="/assets/patients.png" alt="Patient Photo" class="photo patient-photo">
+                </div>
+            </div>
+            <div class="logs">
+                <div id="log">
+                    <strong>New Staff Added:</strong> John Doe - July 1, 2023
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery-3.6.3.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
