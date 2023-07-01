@@ -1,2 +1,2 @@
 # Hospital
-for hospitals
+add all the files into one single folder
